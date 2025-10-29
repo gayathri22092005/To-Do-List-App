@@ -1,0 +1,86 @@
+10.26 8:51 PM
+HTML Code 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - To Do</title>
+<link rel="stylesheet" href="todologin.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container" id="loginPage">
+  <!-- Left side (form) -->
+  <div class="left">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo6QJedxtdWBM8e-6FsaD1L8ojUA9qkQRCWA&s" alt="To Do Logo" />
+      To Do
+    </div>
+    <h2>Welcome back</h2>
+    <p>Please enter your details</p>
+    <form id="loginForm">
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Enter your username" required />
+      
+      <label>Password</label>
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Enter your password" required />
+        <img id="togglePassword" src="https://cdn-icons-png.flaticon.com/512/565/565655.png" alt="Show/Hide Password">
+      </div>
+      <div class="warning" id="passwordWarning"></div>
+
+      <div class="options">
+        <div>
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember for 30 days</label>
+        </div>
+        <a href="#">Forgot password</a>
+      </div>
+
+      <button class="btn" type="submit">Sign in</button>
+
+      <!-- Sign in with Google -->
+      <button type="button" class="google-btn">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google logo" /> Sign in with Google
+      </button>
+    </form>
+
+    <div class="signup">
+      Don't have an account? <a href="#">Sign up</a>
+    </div>
+  </div>
+
+  <!-- Right side (image) -->
+  <div class="right">
+    <img src="https://automat.ir/wp-content/uploads/2025/04/login_bg.webp" alt="To Do Illustration" />
+  </div>
+</div>
+
+<!-- To Do App -->
+<div id="todoApp" style="display:none;">
+  <h1>Plan Your Day!</h1>
+  <div id="todoForm">
+    <input type="text" id="taskTitle" placeholder="Task Title" />
+    <input type="text" id="taskDesc" placeholder="Description" />
+    <textarea id="taskDesc" placeholder="Description" rows="1"></textarea>
+    <input type="date" id="taskDate" />
+    <select id="taskCategory">
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+    </select>
+    <select id="taskPriority">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+    <button id="addTodo">Add Task</button>
+    <button id="logoutBtn">Logout</button>
+  </div>
+  <ul id="todoList"></ul>
+</div>
+
+<script src="todologin.js"></script>
+</body>
+</html>
