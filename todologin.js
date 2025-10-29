@@ -1,5 +1,3 @@
-10.26 8:52 PM
-Javascript Code
 // === LOGIN PAGE VARIABLES ===
 const form = document.getElementById('loginForm');
 const passwordInput = document.getElementById('password');
